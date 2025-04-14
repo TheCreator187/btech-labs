@@ -89,3 +89,31 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
       alert('Please fill all fields.');
     }
   });
+  
+  // Add an event listener to the contact form to handle submission
+  const contactForm = document.getElementById('contact-form');
+
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent the default form submission
+  
+    const formData = new FormData(contactForm);
+  
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+  
+      if (response.ok) {
+        alert('Email Sent'); // Display success message
+        contactForm.reset(); // Reset the form fields
+      } else {
+        alert('Failed to send email. Please try again later.');
+      }
+    } catch (error) {
+      alert('An error occurred. Please try again later.');
+    }
+  });
