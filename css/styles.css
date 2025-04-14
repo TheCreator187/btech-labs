@@ -230,6 +230,37 @@ textarea {
   min-height: 100px;
 }
 
+button[type="submit"] {
+  background: linear-gradient(90deg, #ff00ff, #00ffea);
+  border: none;
+  border-radius: 25px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(90deg, #00ffea, #ff00ff);
+}
+
+.social-logo {
+  width: 40px; /* Adjust the size as needed */
+  height: auto;
+}
+
+.social-links {
+  margin-top: 20px; /* Slightly lower the social media logos */
+  display: flex;
+  gap: 15px; /* Add spacing between the logos */
+  justify-content: center;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero h1 {
