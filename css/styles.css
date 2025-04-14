@@ -209,27 +209,46 @@ a.neon-button:hover {
   transition: width 1s ease-in-out;
 }
 
-/* Contact Section */
+/* Updated Contact Section */
 form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  max-width: 500px;
+  gap: 1.5rem;
+  max-width: 600px;
   width: 100%;
+  padding: 2rem;
+  background: rgba(10, 10, 10, 0.9);
+  border: 2px solid #00ffea;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffea;
 }
 
 input, textarea {
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #00ffea;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ff00ff;
   color: #ffffff;
-  border-radius: 5px;
+  border-radius: 10px;
   font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #00ffea;
+  box-shadow: 0 0 10px #00ffea;
 }
 
 textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 150px;
+}
+
+/* Ensure email and message box alignment */
+input[type="email"], textarea {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 button[type="submit"] {
@@ -239,15 +258,15 @@ button[type="submit"] {
   color: #ffffff;
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 0.8rem 2rem;
+  padding: 1rem 2.5rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 button[type="submit"]:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
   background: linear-gradient(90deg, #00ffea, #ff00ff);
 }
 
