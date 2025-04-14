@@ -261,6 +261,25 @@ button[type="submit"]:hover {
   justify-content: center;
 }
 
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.social-logo {
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 5px #00ffea);
+}
+
+.social-logo:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px #ff00ff);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero h1 {
