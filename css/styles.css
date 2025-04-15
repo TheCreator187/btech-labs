@@ -326,6 +326,26 @@ button[type="submit"]:hover {
 
 @media only screen and (max-width: 768px) {
   body {
-    background-size: contain;
+    background-size: 110% auto !important; /* Slightly zooms out the background image */
+    background-position: center center !important; /* Centers the image */
+    background-attachment: scroll !important; /* Fixes issues with fixed backgrounds on mobile */
+    background-repeat: no-repeat !important; /* Prevents tiling */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url('../assets/background.jpg') !important; /* Ensures the correct image is used */
+    background-size: cover !important; /* Ensures the image covers the viewport */
+    background-position: center center !important; /* Centers the image */
+    background-attachment: scroll !important; /* Fixes issues with fixed backgrounds on mobile */
+    background-repeat: no-repeat !important; /* Prevents tiling */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: #1d1d1d !important; /* Changes background to space black color */
+    background-image: none !important; /* Removes the background image */
   }
 }
