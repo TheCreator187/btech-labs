@@ -43,7 +43,7 @@
       gap: 1rem;
     }
 
-    .popup-content input, .popup-content textarea {
+    .popup-content input, .popup-content textarea, .popup-content select {
       padding: 1rem;
       background: rgba(255, 255, 255, 0.1);
       border: 2px solid #ff00ff;
@@ -54,7 +54,7 @@
       transition: all 0.3s ease;
     }
 
-    .popup-content input:focus, .popup-content textarea:focus {
+    .popup-content input:focus, .popup-content textarea:focus, .popup-content select:focus {
       outline: none;
       border-color: #00ffea;
       box-shadow: 0 0 10px #00ffea;
@@ -96,18 +96,43 @@
   </style>
 </head>
 <body>
+  <canvas id="particles"></canvas>
   <div class="popup-container" id="estimatePopup">
     <div class="popup-content">
       <button class="popup-close" onclick="closePopup()">&times;</button>
-      <h2>Get Your Free Project Estimate</h2>
-      <form action="#" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="projectDetails" placeholder="Describe your project in detail (e.g., web page, app, features, etc.)" rows="6" required></textarea>
+      <h2>Free Project Estimate</h2>
+      <form id="estimate-form" action="https://formspree.io/f/mjkyzyod" method="POST">
+        <input type="text" name="name" placeholder="Project Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        
+        <!-- Dropdown for project type -->
+        <select id="projectType" name="projectType" required>
+          <option value="">Select Project Type</option>
+          <option value="webPage">Web Page</option>
+          <option value="mobileApp">Mobile App</option>
+          <option value="eCommerce">E-commerce Platform</option>
+          <option value="customSoftware">Custom Software</option>
+          <option value="other">Other</option>
+        </select>
+
+        <!-- Additional details based on project type -->
+        <div id="additionalDetails" style="display: none;">
+          <textarea name="projectDetails" placeholder="Provide more details about your project" rows="6" required></textarea>
+        </div>
+
+        <input type="hidden" name="_subject" value="New Project Estimate Request from B Tech-Labs">
+        <input type="hidden" name="_to" value="randal@btech-labs.com">
         <button type="submit">Submit</button>
       </form>
     </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS.load('particles', 'assets/particles-config.json', function() {
+      console.log('Particles.js config loaded');
+    });
+  </script>
 
   <script>
     // Function to close the popup
@@ -123,6 +148,17 @@
     // Ensure the popup closes when the X button is pressed
     document.querySelector('.popup-close').addEventListener('click', function() {
       window.close();
+    });
+
+    const projectTypeDropdown = document.getElementById('projectType');
+    const additionalDetailsDiv = document.getElementById('additionalDetails');
+
+    projectTypeDropdown.addEventListener('change', function() {
+      if (this.value) {
+        additionalDetailsDiv.style.display = 'block';
+      } else {
+        additionalDetailsDiv.style.display = 'none';
+      }
     });
   </script>
 </body>
