@@ -190,6 +190,10 @@ a.neon-button, a.alternate-button {
   text-shadow: 0 0 10px #ff00ff;
 }
 
+.project-banners img {
+  margin-bottom: 5rem; /* Increased margin to further separate the banners from the project grid */
+}
+
 /* Skills Section */
 .skills-grid {
   max-width: 800px;
@@ -413,5 +417,11 @@ button[type="submit"]:hover {
 @media (max-width: 768px) {
   .about-content p {
     font-size: 0.9rem; /* Reduced font size for better readability on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    margin-top: 2rem; /* Slightly lowered the grid to avoid clipping */
   }
 }
