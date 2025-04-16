@@ -12,10 +12,9 @@ html, body {
 
 body {
   font-family: 'Orbitron', sans-serif;
-  background: url('../assets/background.jpg') no-repeat center center fixed !important;
-  background-size: cover !important;
+  background: url('../assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #e4e3e3;
-  overflow-x: hidden;
 }
 
 section {
@@ -36,7 +35,6 @@ section {
   top: 0;
   width: 100%;
   background: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(10px);
   padding: 1rem;
   text-align: center;
   z-index: 1000;
@@ -73,23 +71,6 @@ section {
   font-size: 4rem;
   color: #ff00ff;
   text-shadow: 0 0 15px #ff00ff;
-}
-
-.glitch {
-  position: relative;
-  animation: glitch 1s linear infinite;
-}
-
-@keyframes glitch {
-  2%, 64% {
-    transform: translate(2px, 0) skew(0deg);
-  }
-  4%, 60% {
-    transform: translate(-2px, 0) skew(0deg);
-  }
-  62% {
-    transform: translate(0, 0) skew(5deg);
-  }
 }
 
 .hero p {
@@ -333,6 +314,14 @@ button[type="submit"]:hover {
   filter: drop-shadow(0 0 10px #ff00ff);
 }
 
+.service-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero h1 {
@@ -365,8 +354,7 @@ button[type="submit"]:hover {
 
 @media (max-width: 768px) {
   .service-logo {
-    width: 400px; /* Adjust the size as needed */
-    height: auto;
+    width: 60px;
   }
 }
 
@@ -405,5 +393,11 @@ button[type="submit"]:hover {
 @media only screen and (max-width: 768px) {
   body {
     overflow-x: hidden !important; /* Prevents horizontal scrolling on mobile view */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content p {
+    font-size: 0.9rem; /* Reduced font size for better readability on mobile */
   }
 }
