@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+/* Fix horizontal scrolling issue on mobile view */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Orbitron', sans-serif;
   background: url('../assets/background.jpg') no-repeat center center fixed !important;
@@ -20,6 +26,8 @@ section {
   align-items: center;
   justify-content: center;
   position: relative;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -137,6 +145,9 @@ a.neon-button:hover {
   text-align: left;
   font-size: 1.2rem;
   line-height: 1.8;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0 1rem;
 }
 
 .profile-img {
@@ -156,6 +167,9 @@ a.neon-button:hover {
   gap: 2rem;
   max-width: 1200px;
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0 1rem;
 }
 
 .project-card {
@@ -184,6 +198,9 @@ a.neon-button:hover {
 .skills-grid {
   max-width: 800px;
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0 1rem;
 }
 
 .skill-bar {
@@ -321,6 +338,13 @@ button[type="submit"]:hover {
     width: 100%;
     max-width: 150px;
     height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar a {
+    font-size: 0.8rem; /* Reduce font size for mobile view */
+    margin: 0 0.3rem; /* Adjust spacing to fit all items */
   }
 }
 
