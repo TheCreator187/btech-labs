@@ -24,7 +24,7 @@
     <h1 class="glitch">TechLabs</h1>
     <p>Crafting the Web one Pixel at a time.</p>
     <a href="#projects" class="neon-button">Explore My Work</a>
-    <a href="#contact" class="neon-button alternate-button" style="margin-top: 1rem;">Get Your Free Project Estimate</a>
+    <a href="/estimate.html" class="neon-button alternate-button" style="margin-top: 1rem;">Get Your Free Project Estimate</a>
   </section>
 
   <!-- Projects Section -->
@@ -145,5 +145,11 @@ With a commitment to excellence and a fresh perspective, our vibrant team collab
   </section>
 
   <script src="js/script.js"></script>
+  <script>
+    document.querySelector('.alternate-button').addEventListener('click', function(event) {
+      event.preventDefault();
+      window.open('estimate.html', 'Estimate', 'width=600,height=600,scrollbars=yes,resizable=yes');
+    });
+  </script>
 </body>
 </html>
