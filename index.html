@@ -24,19 +24,7 @@
     <h1 class="glitch">TechLabs</h1>
     <p>Crafting the Web one Pixel at a time.</p>
     <a href="#projects" class="neon-button">Explore My Work</a>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About B TechLabs</h2>
-    <div class="about-content">
-      <p>
-        At B Tech-Labs, we are a dynamic full-stack web development company driven by a passionate team of innovative and forward-thinking developers. Specializing in crafting cutting-edge, tailor-made digital solutions, we empower businesses to thrive in the modern online landscape. Our expertise spans the entire development spectrum—from sleek, user-centric front-end designs to robust, scalable back-end systems—ensuring seamless, high-performance websites and applications. 
-With a commitment to excellence and a fresh perspective, our vibrant team collaborates closely with clients to transform ideas into reality. Whether you're a startup seeking a bold digital presence or an established enterprise aiming to elevate your online capabilities, B Tech-Labs delivers solutions that blend creativity, technology, and reliability. Partner with us to unlock your brand’s potential and captivate your audience with exceptional web experiences.
-
-
-      </p>
-    </div>
+    <a href="#contact" class="neon-button alternate-button" style="margin-top: 1rem;">Get Your Free Project Estimate</a>
   </section>
 
   <!-- Projects Section -->
@@ -119,31 +107,42 @@ With a commitment to excellence and a fresh perspective, our vibrant team collab
     </div>
   </section>
 
+  <!-- About Section -->
+  <section id="about">
+    <h2>About B TechLabs</h2>
+    <div class="about-content">
+      <p>
+        At B Tech-Labs, we are a dynamic full-stack web development company driven by a passionate team of innovative and forward-thinking developers. Specializing in crafting cutting-edge, tailor-made digital solutions, we empower businesses to thrive in the modern online landscape. Our expertise spans the entire development spectrum—from sleek, user-centric front-end designs to robust, scalable back-end systems—ensuring seamless, high-performance websites and applications. 
+With a commitment to excellence and a fresh perspective, our vibrant team collaborates closely with clients to transform ideas into reality. Whether you're a startup seeking a bold digital presence or an established enterprise aiming to elevate your online capabilities, B Tech-Labs delivers solutions that blend creativity, technology, and reliability. Partner with us to unlock your brand’s potential and captivate your audience with exceptional web experiences.
+      </p>
+    </div>
+  </section>
+
   <!-- Contact Section -->
-<section id="contact">
-  <h2>Contact</h2>
-  <form id="contact-form" action="https://formspree.io/f/mjkyzyod" method="POST" class="contact-form-modern">
-    <div class="form-group">
-      <label for="email">Your email:</label>
-      <input type="email" id="email" name="email" required class="form-input">
+  <section id="contact">
+    <h2>Contact</h2>
+    <form id="contact-form" action="https://formspree.io/f/mjkyzyod" method="POST" class="contact-form-modern">
+      <div class="form-group">
+        <label for="email">Your email:</label>
+        <input type="email" id="email" name="email" required class="form-input">
+      </div>
+      <div class="form-group">
+        <label for="message">Your message:</label>
+        <textarea id="message" name="message" required class="form-input"></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="New Contact Form Submission from B Tech-Labs">
+      <input type="hidden" name="_to" value="randal@btech-labs.com">
+      <button type="submit" class="neon-button">Send</button>
+    </form>
+    <div class="social-links">
+      <a href="https://www.instagram.com/b.techlabs" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-logo">
+      </a>
+      <a href="https://www.t.me/btechlabs" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="social-logo">
+      </a>
     </div>
-    <div class="form-group">
-      <label for="message">Your message:</label>
-      <textarea id="message" name="message" required class="form-input"></textarea>
-    </div>
-    <input type="hidden" name="_subject" value="New Contact Form Submission from B Tech-Labs">
-    <input type="hidden" name="_to" value="randal@btech-labs.com">
-    <button type="submit" class="neon-button">Send</button>
-  </form>
-  <div class="social-links">
-    <a href="https://www.instagram.com/b.techlabs" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-logo">
-    </a>
-    <a href="https://www.t.me/btechlabs" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="social-logo">
-    </a>
-  </div>
-</section>
+  </section>
 
   <script src="js/script.js"></script>
 </body>
