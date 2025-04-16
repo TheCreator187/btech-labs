@@ -363,6 +363,13 @@ button[type="submit"]:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .service-logo {
+    width: 400px; /* Adjust the size as needed */
+    height: auto;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   body {
     background-size: 110% auto !important; /* Slightly zooms out the background image */
