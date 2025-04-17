@@ -340,6 +340,59 @@ button[type="submit"]:hover {
   justify-content: center;
 }
 
+.modern-services {
+  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.modern-services .section-title {
+  font-size: 2.5rem;
+  color: #00ffea;
+  text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+  margin-bottom: 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-item {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #00ffea;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 255, 234, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 255, 234, 0.5);
+}
+
+.service-icon {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 10px #00ffea);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero h1 {
