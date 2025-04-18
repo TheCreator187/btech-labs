@@ -117,3 +117,47 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
       alert('An error occurred. Please try again later.');
     }
   });
+
+  // Terminal typing animation
+  const typingTextElement = document.getElementById('typingText');
+  const commands = [
+      'node server.js',
+      'npm run build',
+      'git push origin main',
+      'mongo --eval "db.status()"',
+      'curl https://api.btechlabs.com'
+  ];
+  let commandIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  
+  function type() {
+      const currentCommand = commands[commandIndex];
+      if (!isDeleting) {
+          // Typing
+          if (charIndex < currentCommand.length) {
+              typingTextElement.textContent += currentCommand[charIndex];
+              charIndex++;
+              setTimeout(type, 100); // Typing speed
+          } else {
+              isDeleting = true;
+              setTimeout(type, 2000); // Pause before deleting
+          }
+      } else {
+          // Deleting
+          if (charIndex > 0) {
+              typingTextElement.textContent = currentCommand.substring(0, charIndex - 1);
+              charIndex--;
+              setTimeout(type, 50); // Deleting speed
+          } else {
+              isDeleting = false;
+              commandIndex = (commandIndex + 1) % commands.length; // Cycle to next command
+              setTimeout(type, 500); // Pause before typing next
+          }
+      }
+  }
+  
+  // Start typing animation
+  if (typingTextElement) {
+      type();
+  }

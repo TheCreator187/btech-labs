@@ -107,17 +107,25 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <div class="about-content">
-      <p>
-        At B Tech-Labs, we are a dynamic full-stack web development company driven by a passionate team of innovative and forward-thinking developers. Specializing in crafting cutting-edge, tailor-made digital solutions, we empower businesses to thrive in the modern online landscape. Our expertise spans the entire development spectrum—from sleek, user-centric front-end designs to robust, scalable back-end systems—ensuring seamless, high-performance websites and applications. 
-      <br> <br>
-        With a commitment to excellence and a fresh perspective, our vibrant team collaborates closely with clients to transform ideas into reality. Whether you're a startup seeking a bold digital presence or an established enterprise aiming to elevate your online capabilities, B Tech-Labs delivers solutions that blend creativity, technology, and reliability. Partner with us to unlock your brand’s potential and captivate your audience with exceptional web experiences.
-      </p>
+
+  <!-- Terminal Window -->
+  <div class="terminal-window">
+    <div class="terminal-header">
+      <div class="window-button red"></div>
+      <div class="window-button yellow"></div>
+      <div class="window-button green"></div>
     </div>
-  </section>
+    <div class="terminal-body" id="terminalOutput">
+      <p><span class="command">$ whoami</span></p>
+      <p><span class="output">btechlabs</span></p>
+      <p><span class="command">$ npm install</span> <span class="string">@btechlabs/core</span></p>
+      <p><span class="output">added </span><span class="number">42</span><span class="output"> packages in </span><span class="number">3s</span></p>
+      <p><span class="command">$ curl</span> <span class="keyword">-X GET</span> <span class="string">"https://api.btechlabs.com/v1/status"</span></p>
+      <p><span class="output">{ </span><span class="string">"status"</span><span class="output">: </span><span class="string">"online"</span><span class="output">, </span><span class="string">"version"</span><span class="output">: </span><span class="string">"1.0.0"</span><span class="output">, </span><span class="string">"uptime"</span><span class="output">: </span><span class="string">"99.9%"</span><span class="output"> }</span></p>
+      <p class="typing" id="typingLine"><span class="command">$ </span><span id="typingText"></span><span class="cursor">|</span></p>
+    </div>
+  </div>
+</section>
 
   <!-- Services Section -->
   <section id="services">
@@ -164,6 +172,19 @@
       <p>We are here for for our clients 24/7</p>
     </div>
   </section>
+
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Us</h2>
+      <div class="about-content">
+        <p>
+          At B Tech-Labs, we are a dynamic full-stack web development company driven by a passionate team of innovative and forward-thinking developers. Specializing in crafting cutting-edge, tailor-made digital solutions, we empower businesses to thrive in the modern online landscape. Our expertise spans the entire development spectrum—from sleek, user-centric front-end designs to robust, scalable back-end systems—ensuring seamless, high-performance websites and applications. 
+        <br> <br>
+          With a commitment to excellence and a fresh perspective, our vibrant team collaborates closely with clients to transform ideas into reality. Whether you're a startup seeking a bold digital presence or an established enterprise aiming to elevate your online capabilities, B Tech-Labs delivers solutions that blend creativity, technology, and reliability. Partner with us to unlock your brand’s potential and captivate your audience with exceptional web experiences.
+        </p>
+      </div>
+    </section>
 
   <!-- Contact Section -->
   <section id="contact">
